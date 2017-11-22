@@ -1,5 +1,4 @@
 #!/usr/bin/env nodejs
-var app = require('http').createServer(handler)
 
 function handler (req, res) {
 
@@ -26,6 +25,7 @@ function handler (req, res) {
   });
 }
 
+var app = require('http').createServer(handler)
 app.listen(8080, '162.243.217.204');
 
 /*http.createServer(function (req, res) {
