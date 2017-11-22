@@ -1,4 +1,5 @@
 #!/usr/bin/env nodejs
+var fs = require('fs');
 
 function handler (req, res) {
 
@@ -27,6 +28,8 @@ function handler (req, res) {
 
 var app = require('http').createServer(handler)
 app.listen(8080, '162.243.217.204');
+
+console.log('Server running at http://162.243.217.204:8080/')
 
 /*http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
