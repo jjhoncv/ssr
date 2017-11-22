@@ -1,5 +1,7 @@
 #!/usr/bin/env nodejs
 var fs = require('fs');
+var config = require('./config');
+var app = require('http').createServer(handler)
 
 function handler (req, res) {
 
@@ -26,8 +28,7 @@ function handler (req, res) {
   });
 }
 
-var app = require('http').createServer(handler)
-app.listen(8080, '162.243.217.204');
+app.listen(config.port, config.host);
 
 console.log('Server running at http://162.243.217.204:8080/')
 
