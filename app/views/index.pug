@@ -1,0 +1,7 @@
+extends /views/partials/layout.pug
+block content
+	p hola Home
+
+	form(action="/" method="post", enctype="multipart/form-data")
+		input(type="file" name="demo")
+		button send

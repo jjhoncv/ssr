@@ -1,0 +1,28 @@
+{
+  "name": "ssr",
+  "version": "1.0.0",
+  "description": "rendering web from server node",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "export NODE_ENV=local && ./node_modules/.bin/babel-node server.js --presets env",
+    "production": "export NODE_ENV=production && babel-node node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "jhonnatan@162.243.217.204:/home/jhonnatan/bare/ssr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "formidable": "^1.1.1",
+    "pug": "^2.0.0-rc.4"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "express": "^4.16.2",
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5"
+  }
+}

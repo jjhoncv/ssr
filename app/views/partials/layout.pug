@@ -1,0 +1,18 @@
+include /views/config/page.pug
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title
+    link(rel='icon', href='data:;base64,iVBORw0KGgo=')
+    link(rel='stylesheet', href=page.urlStatic + 'css/style.css')
+  body
+    header
+      include /views/partials/header
+    main
+      block content
+    footer
+      include /views/partials/footer
+
+    script(src=page.urlStatic + 'js/main.js')
