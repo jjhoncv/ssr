@@ -1,6 +1,6 @@
-import express from 'express';
-import fs from 'fs';
-import path from 'path';
+import * as express from 'express';
+import * as fs from 'fs';
+import * as path from 'path';
 import formidable from 'formidable';
 const router = express.Router();
 
@@ -28,4 +28,6 @@ router.post('/', function(req, res) {
 
 });
 
-module.exports = router;
+export default router
+
+//module.exports = router;

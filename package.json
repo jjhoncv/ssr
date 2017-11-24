@@ -5,7 +5,7 @@
   "main": "config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "local": "export NODE_ENV=local && ./node_modules/.bin/babel-node server.js --presets env",
+    "local": "export NODE_ENV=local && ./node_modules/.bin/ts-node server.ts",
     "production": "export NODE_ENV=production && babel-node node server.js"
   },
   "repository": {
@@ -15,9 +15,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^8.0.53",
     "babel-preset-env": "^1.6.1",
     "formidable": "^1.1.1",
-    "pug": "^2.0.0-rc.4"
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.4",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
