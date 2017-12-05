@@ -1,5 +1,5 @@
-import config from './server.ini'
-import site from './app/config/site.ini'
+import config from './config/server.ini'
+import client from './config/client.ini'
 
 import * as express from 'express';
 import * as path from 'path'
@@ -12,10 +12,10 @@ const app = express();
 // Declaro a pug como el motor de renderizado
 app.set('view engine', 'pug');
 app.set('views', config.dirViews);
-app.set('view options', { basedir: config.dirApp})
+app.set('view options', { basedir: config.dirServer})
 
-app.locals.basedir = config.dirApp; //necesario para express reconosca basedir de pug
-app.locals.site = site;
+app.locals.basedir = config.dirServer; //necesario para express reconosca basedir de pug
+app.locals.site = client;
 
 // tell node to compile.styl-files to normal css-files
 app.use(stylus.middleware({
@@ -30,13 +30,9 @@ app.use(stylus.middleware({
 app.use(express.static(`${config.dirPublic}/`));
 
 // create routes
-import RouterIndex from './app/routers/index'
-import RouterAbout from './app/routers/about'
-import RouterContact from './app/routers/contact'
+import RouterIndex from './routes/index'
 
 app.use('/', RouterIndex)
-app.use('/about', RouterAbout)
-app.use('/contact', RouterContact)
 
 app.listen(`${config.port}`, `${config.host}`);
 

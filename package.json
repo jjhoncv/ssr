@@ -5,8 +5,8 @@
   "main": "config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "local": "export NODE_ENV=local && ./node_modules/.bin/ts-node server.ts",
-    "production": "export NODE_ENV=production && babel-node node server.js"
+    "local": "export NODE_ENV=local && ./node_modules/.bin/ts-node ./server/server.ts",
+    "production": "export NODE_ENV=production && babel-node node ./server/server.js"
   },
   "repository": {
     "type": "git",
